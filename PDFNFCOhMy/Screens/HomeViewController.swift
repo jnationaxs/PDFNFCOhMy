@@ -43,6 +43,11 @@ class HomeViewController: UIViewController {
     }
 
     @objc func didClickGeneratePDF(sender: UIButton) {
+        guard let barcodeImage = barcodeImageView.image, let imgData = barcodeImage.pngData() else {
+            return
+        }
+
+
 
     }
 
