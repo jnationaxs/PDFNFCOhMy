@@ -13,6 +13,7 @@
 		FEAF97B625C37144008D41AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAF97B425C37144008D41AA /* Main.storyboard */; };
 		FEAF97B825C37146008D41AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAF97B725C37146008D41AA /* Assets.xcassets */; };
 		FEAF97BB25C37146008D41AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAF97B925C37146008D41AA /* LaunchScreen.storyboard */; };
+		FEAF97C925C38506008D41AA /* BarcodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97C825C38506008D41AA /* BarcodeGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FEAF97B725C37146008D41AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEAF97BA25C37146008D41AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEAF97BC25C37146008D41AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEAF97C825C38506008D41AA /* BarcodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		FEAF97AD25C37144008D41AA /* PDFNFCOhMy */ = {
 			isa = PBXGroup;
 			children = (
+				FEAF97C725C384F9008D41AA /* Utility */,
 				FEAF97AE25C37144008D41AA /* AppDelegate.swift */,
 				FEAF97B025C37144008D41AA /* SceneDelegate.swift */,
 				FEAF97C425C37285008D41AA /* Screens */,
@@ -81,6 +84,14 @@
 				FEAF97B225C37144008D41AA /* HomeViewController.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		FEAF97C725C384F9008D41AA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FEAF97C825C38506008D41AA /* BarcodeGenerator.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEAF97C925C38506008D41AA /* BarcodeGenerator.swift in Sources */,
 				FEAF97B325C37144008D41AA /* HomeViewController.swift in Sources */,
 				FEAF97AF25C37144008D41AA /* AppDelegate.swift in Sources */,
 				FEAF97B125C37144008D41AA /* SceneDelegate.swift in Sources */,
