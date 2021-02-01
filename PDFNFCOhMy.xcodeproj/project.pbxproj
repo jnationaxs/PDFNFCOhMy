@@ -15,6 +15,8 @@
 		FEAF97BB25C37146008D41AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAF97B925C37146008D41AA /* LaunchScreen.storyboard */; };
 		FEAF97C925C38506008D41AA /* BarcodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97C825C38506008D41AA /* BarcodeGenerator.swift */; };
 		FEAF97CC25C39438008D41AA /* PDFGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97CB25C39438008D41AA /* PDFGenerator.swift */; };
+		FEAF980125C8A848008D41AA /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF980025C8A848008D41AA /* UIButton+Ext.swift */; };
+		FEAF980525C8A8EA008D41AA /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF980425C8A8EA008D41AA /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		FEAF97BC25C37146008D41AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEAF97C825C38506008D41AA /* BarcodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeGenerator.swift; sourceTree = "<group>"; };
 		FEAF97CB25C39438008D41AA /* PDFGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFGenerator.swift; sourceTree = "<group>"; };
+		FEAF980025C8A848008D41AA /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		FEAF980425C8A8EA008D41AA /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		FEAF97AD25C37144008D41AA /* PDFNFCOhMy */ = {
 			isa = PBXGroup;
 			children = (
+				FEAF97FF25C8A832008D41AA /* Extensions */,
 				FEAF97C725C384F9008D41AA /* Utility */,
 				FEAF97AE25C37144008D41AA /* AppDelegate.swift */,
 				FEAF97B025C37144008D41AA /* SceneDelegate.swift */,
@@ -95,6 +100,15 @@
 				FEAF97CB25C39438008D41AA /* PDFGenerator.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		FEAF97FF25C8A832008D41AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FEAF980025C8A848008D41AA /* UIButton+Ext.swift */,
+				FEAF980425C8A8EA008D41AA /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +184,10 @@
 				FEAF97C925C38506008D41AA /* BarcodeGenerator.swift in Sources */,
 				FEAF97CC25C39438008D41AA /* PDFGenerator.swift in Sources */,
 				FEAF97B325C37144008D41AA /* HomeViewController.swift in Sources */,
+				FEAF980525C8A8EA008D41AA /* UIViewController+Ext.swift in Sources */,
 				FEAF97AF25C37144008D41AA /* AppDelegate.swift in Sources */,
 				FEAF97B125C37144008D41AA /* SceneDelegate.swift in Sources */,
+				FEAF980125C8A848008D41AA /* UIButton+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

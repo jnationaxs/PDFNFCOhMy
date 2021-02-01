@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
     @objc func didClickGenerateImage(sender: UIButton) {
         // generate Barcode
         guard let rawString = barcodeValueTextField.text, let barcodeCIImg = BarcodeGenerator.generate(from: rawString, descriptor: .code128, size: self.barcodeImageView.bounds.size.applying(CGAffineTransform(scaleX: 0.8, y: 0.8))) else {
+            self.showSimpleAlert(msg: "Unable to generate image", title: "Error")
             return
         }
 
@@ -43,12 +44,14 @@ class HomeViewController: UIViewController {
     }
 
     @objc func didClickGeneratePDF(sender: UIButton) {
-        guard let barcodeImage = barcodeImageView.image, let imgData = barcodeImage.pngData() else {
+        guard let barcodeImage = barcodeImageView.image, let generatedPDF = PDFGenerator.generate(image: barcodeImage) else {
+            self.showSimpleAlert(msg: "Unable to generate PDF", title: "Error")
             return
         }
 
-
-
+        generatePDFButton.matchState(isActive: false)
+        beginSharingButton.matchState(isActive: true)
+        viewPDFButton.matchState(isActive: true)
     }
 
     @objc func didClickViewPDF(sender: UIButton) {
@@ -102,24 +105,3 @@ class HomeViewController: UIViewController {
 }
 
 
-
-extension UIButton {
-
-    @discardableResult func withTitle(_ title: String) -> Self {
-        setTitle(title, for: .normal)
-        return self
-    }
-
-    @discardableResult func withClickAction(_ selector: Selector, target: Any?) -> Self {
-        removeTarget(target, action: nil, for: .touchUpInside)
-        addTarget(target, action: selector, for: .touchUpInside)
-        return self
-    }
-
-    @discardableResult func matchState(isActive: Bool) -> Self {
-        self.backgroundColor = isActive ? UIColor.black : .darkGray
-        self.setTitleColor(isActive ? UIColor.systemBlue : .white, for: .normal)
-        self.isEnabled = isActive
-        return self
-    }
-}
