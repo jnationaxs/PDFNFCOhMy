@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E32E327625C45871003A7926 /* NFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E327525C45871003A7926 /* NFC.swift */; };
+		E32E327A25C465BB003A7926 /* NFCShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E327925C465BB003A7926 /* NFCShareController.swift */; };
+		FE0ADEBD25CB107500DCFFAC /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0ADEBB25CB107500DCFFAC /* UIViewController+Ext.swift */; };
+		FE0ADEBE25CB107500DCFFAC /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0ADEBC25CB107500DCFFAC /* UIButton+Ext.swift */; };
 		FEAF97AF25C37144008D41AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97AE25C37144008D41AA /* AppDelegate.swift */; };
 		FEAF97B125C37144008D41AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97B025C37144008D41AA /* SceneDelegate.swift */; };
 		FEAF97B325C37144008D41AA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97B225C37144008D41AA /* HomeViewController.swift */; };
@@ -15,11 +19,14 @@
 		FEAF97BB25C37146008D41AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAF97B925C37146008D41AA /* LaunchScreen.storyboard */; };
 		FEAF97C925C38506008D41AA /* BarcodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97C825C38506008D41AA /* BarcodeGenerator.swift */; };
 		FEAF97CC25C39438008D41AA /* PDFGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97CB25C39438008D41AA /* PDFGenerator.swift */; };
-		FEAF980125C8A848008D41AA /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF980025C8A848008D41AA /* UIButton+Ext.swift */; };
-		FEAF980525C8A8EA008D41AA /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF980425C8A8EA008D41AA /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E32E327125C45800003A7926 /* PDFNFCOhMy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFNFCOhMy.entitlements; sourceTree = "<group>"; };
+		E32E327525C45871003A7926 /* NFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFC.swift; sourceTree = "<group>"; };
+		E32E327925C465BB003A7926 /* NFCShareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCShareController.swift; sourceTree = "<group>"; };
+		FE0ADEBB25CB107500DCFFAC /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Ext.swift"; path = "Extensions/UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		FE0ADEBC25CB107500DCFFAC /* UIButton+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Ext.swift"; path = "Extensions/UIButton+Ext.swift"; sourceTree = "<group>"; };
 		FEAF97AB25C37144008D41AA /* PDFNFCOhMy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFNFCOhMy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAF97AE25C37144008D41AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAF97B025C37144008D41AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,8 +37,6 @@
 		FEAF97BC25C37146008D41AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEAF97C825C38506008D41AA /* BarcodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeGenerator.swift; sourceTree = "<group>"; };
 		FEAF97CB25C39438008D41AA /* PDFGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFGenerator.swift; sourceTree = "<group>"; };
-		FEAF980025C8A848008D41AA /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
-		FEAF980425C8A8EA008D41AA /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E32E326F25C4564F003A7926 /* NFC */ = {
+			isa = PBXGroup;
+			children = (
+				E32E327525C45871003A7926 /* NFC.swift */,
+			);
+			path = NFC;
+			sourceTree = "<group>";
+		};
 		FEAF97A225C37144008D41AA = {
 			isa = PBXGroup;
 			children = (
@@ -64,8 +77,11 @@
 		FEAF97AD25C37144008D41AA /* PDFNFCOhMy */ = {
 			isa = PBXGroup;
 			children = (
-				FEAF97FF25C8A832008D41AA /* Extensions */,
+				FE0ADEBC25CB107500DCFFAC /* UIButton+Ext.swift */,
+				FE0ADEBB25CB107500DCFFAC /* UIViewController+Ext.swift */,
+				E32E327125C45800003A7926 /* PDFNFCOhMy.entitlements */,
 				FEAF97C725C384F9008D41AA /* Utility */,
+				E32E326F25C4564F003A7926 /* NFC */,
 				FEAF97AE25C37144008D41AA /* AppDelegate.swift */,
 				FEAF97B025C37144008D41AA /* SceneDelegate.swift */,
 				FEAF97C425C37285008D41AA /* Screens */,
@@ -89,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				FEAF97B225C37144008D41AA /* HomeViewController.swift */,
+				E32E327925C465BB003A7926 /* NFCShareController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -100,15 +117,6 @@
 				FEAF97CB25C39438008D41AA /* PDFGenerator.swift */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		FEAF97FF25C8A832008D41AA /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				FEAF980025C8A848008D41AA /* UIButton+Ext.swift */,
-				FEAF980425C8A8EA008D41AA /* UIViewController+Ext.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,11 +191,13 @@
 			files = (
 				FEAF97C925C38506008D41AA /* BarcodeGenerator.swift in Sources */,
 				FEAF97CC25C39438008D41AA /* PDFGenerator.swift in Sources */,
+				FE0ADEBE25CB107500DCFFAC /* UIButton+Ext.swift in Sources */,
 				FEAF97B325C37144008D41AA /* HomeViewController.swift in Sources */,
-				FEAF980525C8A8EA008D41AA /* UIViewController+Ext.swift in Sources */,
+				E32E327A25C465BB003A7926 /* NFCShareController.swift in Sources */,
 				FEAF97AF25C37144008D41AA /* AppDelegate.swift in Sources */,
 				FEAF97B125C37144008D41AA /* SceneDelegate.swift in Sources */,
-				FEAF980125C8A848008D41AA /* UIButton+Ext.swift in Sources */,
+				FE0ADEBD25CB107500DCFFAC /* UIViewController+Ext.swift in Sources */,
+				E32E327625C45871003A7926 /* NFC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +344,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PDFNFCOhMy/PDFNFCOhMy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJWS6K5M25;
 				INFOPLIST_FILE = PDFNFCOhMy/Info.plist;
@@ -353,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PDFNFCOhMy/PDFNFCOhMy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJWS6K5M25;
 				INFOPLIST_FILE = PDFNFCOhMy/Info.plist;
