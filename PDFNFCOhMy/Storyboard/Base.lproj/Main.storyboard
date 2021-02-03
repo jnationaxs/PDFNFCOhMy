@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E2E-3m-SKg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Export-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="PDFNFCOhMy" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4t-e5-RsL">
-                                <rect key="frame" x="8" y="804" width="398" height="42"/>
+                                <rect key="frame" x="8" y="755" width="398" height="42"/>
                                 <color key="backgroundColor" red="0.0" green="0.031372549020000001" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Begin Sharing"/>
                             </button>
@@ -82,6 +82,7 @@
                             <constraint firstItem="zyb-By-I98" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yxG-JM-3GW"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Export" image="square.and.arrow.up" catalog="system" id="4Br-rk-JEV"/>
                     <connections>
                         <outlet property="barcodeImageView" destination="zyb-By-I98" id="MvV-5u-uTJ"/>
                         <outlet property="barcodeValueTextField" destination="M3g-WP-ZaO" id="50G-5z-ed8"/>
@@ -95,9 +96,61 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
+        <!--NFC-->
+        <scene sceneID="qfd-nD-iPH">
+            <objects>
+                <viewController id="sX6-7R-5JD" customClass="NFCShareController" customModule="PDFNFCOhMy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cQG-D0-PB6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwM-4t-rlB">
+                                <rect key="frame" x="170.5" y="433" width="73" height="30"/>
+                                <state key="normal" title="Share URL"/>
+                                <connections>
+                                    <action selector="tapShare:" destination="sX6-7R-5JD" eventType="touchUpInside" id="K1n-1y-8qz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="21w-UB-ptt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nwM-4t-rlB" firstAttribute="centerY" secondItem="cQG-D0-PB6" secondAttribute="centerY" id="P1P-jk-X4e"/>
+                            <constraint firstItem="nwM-4t-rlB" firstAttribute="centerX" secondItem="cQG-D0-PB6" secondAttribute="centerX" id="aXt-Ar-dJv"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="NFC" image="rectangle.dashed.and.paperclip" catalog="system" id="cMc-6h-0rg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMM-su-cBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="88"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hpx-zh-tui">
+            <objects>
+                <tabBarController id="E2E-3m-SKg" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="myf-9D-bN9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="UDZ-7h-V0T"/>
+                        <segue destination="sX6-7R-5JD" kind="relationship" relationship="viewControllers" id="z0p-hQ-PVF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Qg-dN-AXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="557" y="-658"/>
+        </scene>
     </scenes>
     <resources>
         <image name="barcode_sample" width="3658" height="1837"/>
+        <image name="rectangle.dashed.and.paperclip" catalog="system" width="128" height="99"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
