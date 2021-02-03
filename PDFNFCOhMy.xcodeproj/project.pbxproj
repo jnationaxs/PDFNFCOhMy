@@ -11,6 +11,7 @@
 		E32E327A25C465BB003A7926 /* NFCShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E327925C465BB003A7926 /* NFCShareController.swift */; };
 		FE0ADEBD25CB107500DCFFAC /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0ADEBB25CB107500DCFFAC /* UIViewController+Ext.swift */; };
 		FE0ADEBE25CB107500DCFFAC /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0ADEBC25CB107500DCFFAC /* UIButton+Ext.swift */; };
+		E36E25AC25CAFA040078B582 /* QRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36E25AB25CAFA040078B582 /* QRCodeController.swift */; };
 		FEAF97AF25C37144008D41AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97AE25C37144008D41AA /* AppDelegate.swift */; };
 		FEAF97B125C37144008D41AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97B025C37144008D41AA /* SceneDelegate.swift */; };
 		FEAF97B325C37144008D41AA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97B225C37144008D41AA /* HomeViewController.swift */; };
@@ -27,6 +28,7 @@
 		E32E327925C465BB003A7926 /* NFCShareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCShareController.swift; sourceTree = "<group>"; };
 		FE0ADEBB25CB107500DCFFAC /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Ext.swift"; path = "Extensions/UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		FE0ADEBC25CB107500DCFFAC /* UIButton+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Ext.swift"; path = "Extensions/UIButton+Ext.swift"; sourceTree = "<group>"; };
+		E36E25AB25CAFA040078B582 /* QRCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeController.swift; sourceTree = "<group>"; };
 		FEAF97AB25C37144008D41AA /* PDFNFCOhMy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFNFCOhMy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAF97AE25C37144008D41AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAF97B025C37144008D41AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				FEAF97B225C37144008D41AA /* HomeViewController.swift */,
 				E32E327925C465BB003A7926 /* NFCShareController.swift */,
+				E36E25AB25CAFA040078B582 /* QRCodeController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				FEAF97CC25C39438008D41AA /* PDFGenerator.swift in Sources */,
 				FE0ADEBE25CB107500DCFFAC /* UIButton+Ext.swift in Sources */,
 				FEAF97B325C37144008D41AA /* HomeViewController.swift in Sources */,
+				E36E25AC25CAFA040078B582 /* QRCodeController.swift in Sources */,
 				E32E327A25C465BB003A7926 /* NFCShareController.swift in Sources */,
 				FEAF97AF25C37144008D41AA /* AppDelegate.swift in Sources */,
 				FEAF97B125C37144008D41AA /* SceneDelegate.swift in Sources */,
