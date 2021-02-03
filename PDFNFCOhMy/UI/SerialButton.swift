@@ -54,6 +54,24 @@ class SerialButton: UIButton {
         return optionsActions[option]
     }
 
+    private func commonInit() {
+        addTarget(self, action: #selector(umbrellaClickAction), for: .touchUpInside)
+    }
+
+    @objc private func umbrellaClickAction() {
+        setOptionIndex(index: currentOptionIndex + 1)
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+
     func addOption(_ option: SerialButtonOption, action: SerialButtonOptionAction?) {
         guard !self.optionsActions.keys.contains(option) else {
             return
@@ -63,11 +81,21 @@ class SerialButton: UIButton {
         self.optionsActions[option] = action
     }
 
+    func setSelectedOption(option: SerialButtonOption) {
+        for (key, val) in self.optionsArrangement {
+            if val == option {
+                setOptionIndex(index: key)
+            }
+        }
+    }
+
     func setOptionIndex(index: Int) {
-        guard let selectedOption = optionsArrangement[index], let iconImage = UIImage(systemName: selectedOption.iconName, compatibleWith: nil) else {
+        let roundedIndex = max(0, index % self.optionsActions.keys.count)
+        guard let selectedOption = optionsArrangement[roundedIndex], let iconImage = UIImage(systemName: selectedOption.iconName, compatibleWith: nil) else {
             return
         }
 
+        self._currentOptionIndex = roundedIndex
         self.setImage(iconImage, for: .normal)
         self.optionsActions[selectedOption]?(selectedOption)
     }

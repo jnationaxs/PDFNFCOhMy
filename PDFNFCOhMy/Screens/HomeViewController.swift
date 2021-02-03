@@ -14,20 +14,19 @@ extension SerialButtonOption {
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var barcodeImageView: UIImageView!
-    @IBOutlet weak var generateBarcodeButton: SerialButton!
-    @IBOutlet weak var generatePDFButton: UIButton!
-    @IBOutlet weak var viewPDFButton: UIButton!
-    @IBOutlet weak var beginSharingButton: UIButton!
+    @IBOutlet weak var generateButton: UIButton!
+    @IBOutlet weak var viewModeButton: SerialButton!
+    @IBAction func tappedGenerate(_ sender: Any) {
+        viewModeButton.setSelectedOption(option: SerialButtonOption.showingImage)
+    }
 
     private lazy var showBarcodeAction: SerialButtonOptionAction = {
         { showBarcodeOption in
-            self.barcodeImageView.image = BarcodeGenerator.generate(descriptor: .qr, size: self.barcodeImageView.bounds.size)
-
+            self.barcodeImageView.fillWithBarcode()
         }
     }()
 
     private lazy var convertToPDFAction: SerialButtonOptionAction = {
-        // clicking on "img" icon calls this
         { pdfOption in
             guard let barcodeImage = self.barcodeImageView.image, let generatedPDF = PDFGenerator.generate(image: barcodeImage) else {
                 self.showSimpleAlert(msg: "Unable to generate PDF", title: "Error")
@@ -38,18 +37,23 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        generateBarcodeButton.addOption(SerialButtonOption.showingImage, action: showBarcodeAction)
-        generateBarcodeButton.addOption(SerialButtonOption.showingImage, action: convertToPDFAction)
-        generateBarcodeButton.setOptionIndex(index: 0)
+        self.barcodeImageView.contentMode = .center
+        viewModeButton.addOption(SerialButtonOption.showingImage, action: showBarcodeAction)
+        viewModeButton.addOption(SerialButtonOption.showingPDF, action: convertToPDFAction)
+        barcodeImageView.isUserInteractionEnabled = false
     }
 
-
-
-    @objc func didClickGenerateImage(sender: UIButton) {
-        // generate Barcode
-        self.barcodeImageView.image = BarcodeGenerator.generate(descriptor: .qr, size: self.barcodeImageView.bounds.size)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        viewModeButton.setOptionIndex(index: 0)
     }
+
 
 }
 
-
+extension UIImageView {
+    func fillWithBarcode() {
+        let scaleTransform = CGAffineTransform(scaleX: 0.4, y: 0.4)
+        self.image = BarcodeGenerator.generate(descriptor: .qr, size: self.bounds.size.applying(scaleTransform))
+    }
+}

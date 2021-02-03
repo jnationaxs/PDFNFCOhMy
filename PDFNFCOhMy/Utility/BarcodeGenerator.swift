@@ -37,6 +37,7 @@ class BarcodeGenerator {
 
         filter.setValue(data, forKey: "inputMessage")
 
+
         guard let image = filter.outputImage else {
             return nil
         }

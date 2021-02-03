@@ -37,6 +37,9 @@
                                     <imageReference key="image" image="barcode.viewfinder" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedGenerate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ocl-b0-eeD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aHL-3g-hrJ" customClass="SerialButton" customModule="PDFNFCOhMy" customModuleProvider="target">
                                 <rect key="frame" x="342" y="92" width="72" height="48"/>
@@ -67,8 +70,8 @@
                     <tabBarItem key="tabBarItem" title="Export" image="square.and.arrow.up" catalog="system" id="4Br-rk-JEV"/>
                     <connections>
                         <outlet property="barcodeImageView" destination="zyb-By-I98" id="MvV-5u-uTJ"/>
-                        <outlet property="generateBarcodeButton" destination="KDZ-sQ-RhU" id="F2L-1b-roH"/>
-                        <outlet property="generatePDFButton" destination="aHL-3g-hrJ" id="fmU-Nn-sYD"/>
+                        <outlet property="generateButton" destination="KDZ-sQ-RhU" id="X3S-p6-njS"/>
+                        <outlet property="viewModeButton" destination="aHL-3g-hrJ" id="mi3-23-aRf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
