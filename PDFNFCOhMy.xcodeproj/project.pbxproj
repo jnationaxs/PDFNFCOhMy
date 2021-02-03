@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		E32E327625C45871003A7926 /* NFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E327525C45871003A7926 /* NFC.swift */; };
 		E32E327A25C465BB003A7926 /* NFCShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E327925C465BB003A7926 /* NFCShareController.swift */; };
+		E36E25AC25CAFA040078B582 /* QRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36E25AB25CAFA040078B582 /* QRCodeController.swift */; };
 		FE0ADEBD25CB107500DCFFAC /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0ADEBB25CB107500DCFFAC /* UIViewController+Ext.swift */; };
 		FE0ADEBE25CB107500DCFFAC /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0ADEBC25CB107500DCFFAC /* UIButton+Ext.swift */; };
-		E36E25AC25CAFA040078B582 /* QRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36E25AB25CAFA040078B582 /* QRCodeController.swift */; };
+		FE0ADEC325CB1EC900DCFFAC /* SerialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0ADEC225CB1EC900DCFFAC /* SerialButton.swift */; };
 		FEAF97AF25C37144008D41AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97AE25C37144008D41AA /* AppDelegate.swift */; };
 		FEAF97B125C37144008D41AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97B025C37144008D41AA /* SceneDelegate.swift */; };
 		FEAF97B325C37144008D41AA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97B225C37144008D41AA /* HomeViewController.swift */; };
@@ -26,9 +27,10 @@
 		E32E327125C45800003A7926 /* PDFNFCOhMy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFNFCOhMy.entitlements; sourceTree = "<group>"; };
 		E32E327525C45871003A7926 /* NFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFC.swift; sourceTree = "<group>"; };
 		E32E327925C465BB003A7926 /* NFCShareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCShareController.swift; sourceTree = "<group>"; };
+		E36E25AB25CAFA040078B582 /* QRCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeController.swift; sourceTree = "<group>"; };
 		FE0ADEBB25CB107500DCFFAC /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Ext.swift"; path = "Extensions/UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		FE0ADEBC25CB107500DCFFAC /* UIButton+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Ext.swift"; path = "Extensions/UIButton+Ext.swift"; sourceTree = "<group>"; };
-		E36E25AB25CAFA040078B582 /* QRCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeController.swift; sourceTree = "<group>"; };
+		FE0ADEC225CB1EC900DCFFAC /* SerialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialButton.swift; sourceTree = "<group>"; };
 		FEAF97AB25C37144008D41AA /* PDFNFCOhMy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFNFCOhMy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAF97AE25C37144008D41AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAF97B025C37144008D41AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,14 @@
 			path = NFC;
 			sourceTree = "<group>";
 		};
+		FE0ADEC125CB1EC000DCFFAC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FE0ADEC225CB1EC900DCFFAC /* SerialButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		FEAF97A225C37144008D41AA = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 		FEAF97AD25C37144008D41AA /* PDFNFCOhMy */ = {
 			isa = PBXGroup;
 			children = (
+				FE0ADEC125CB1EC000DCFFAC /* UI */,
 				FE0ADEBC25CB107500DCFFAC /* UIButton+Ext.swift */,
 				FE0ADEBB25CB107500DCFFAC /* UIViewController+Ext.swift */,
 				E32E327125C45800003A7926 /* PDFNFCOhMy.entitlements */,
@@ -200,6 +211,7 @@
 				E32E327A25C465BB003A7926 /* NFCShareController.swift in Sources */,
 				FEAF97AF25C37144008D41AA /* AppDelegate.swift in Sources */,
 				FEAF97B125C37144008D41AA /* SceneDelegate.swift in Sources */,
+				FE0ADEC325CB1EC900DCFFAC /* SerialButton.swift in Sources */,
 				FE0ADEBD25CB107500DCFFAC /* UIViewController+Ext.swift in Sources */,
 				E32E327625C45871003A7926 /* NFC.swift in Sources */,
 			);

@@ -22,12 +22,15 @@ class BarcodeGenerator {
         case qr = "CIQRCodeGenerator"
     }
 
-    class func generate(from string: String,
-                         descriptor: Descriptor,
-                               size: CGSize) -> CIImage? {
-        let filterName = descriptor.rawValue
 
-        guard let data = string.data(using: .ascii),
+    class func generate(unencryptedString: String? = nil,
+                         descriptor: Descriptor,
+                               size: CGSize) -> UIImage? {
+        let filterName = descriptor.rawValue
+        let stringToEncrypt = unencryptedString ?? UUID().uuidString
+
+
+        guard let data = stringToEncrypt.data(using: .ascii),
             let filter = CIFilter(name: filterName) else {
                 return nil
         }
@@ -44,6 +47,6 @@ class BarcodeGenerator {
                                                y: size.height / imageSize.height)
         let scaledImage = image.transformed(by: transform)
 
-        return scaledImage
+        return UIImage(ciImage: scaledImage)
     }
 }
