@@ -13,6 +13,7 @@
 		FE0ADEBD25CB107500DCFFAC /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0ADEBB25CB107500DCFFAC /* UIViewController+Ext.swift */; };
 		FE0ADEBE25CB107500DCFFAC /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0ADEBC25CB107500DCFFAC /* UIButton+Ext.swift */; };
 		FE0ADEC325CB1EC900DCFFAC /* SerialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0ADEC225CB1EC900DCFFAC /* SerialButton.swift */; };
+		FE0ADEE325CB4C6000DCFFAC /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0ADEE225CB4C6000DCFFAC /* UIImageView+Ext.swift */; };
 		FEAF97AF25C37144008D41AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97AE25C37144008D41AA /* AppDelegate.swift */; };
 		FEAF97B125C37144008D41AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97B025C37144008D41AA /* SceneDelegate.swift */; };
 		FEAF97B325C37144008D41AA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF97B225C37144008D41AA /* HomeViewController.swift */; };
@@ -31,6 +32,7 @@
 		FE0ADEBB25CB107500DCFFAC /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Ext.swift"; path = "Extensions/UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		FE0ADEBC25CB107500DCFFAC /* UIButton+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Ext.swift"; path = "Extensions/UIButton+Ext.swift"; sourceTree = "<group>"; };
 		FE0ADEC225CB1EC900DCFFAC /* SerialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialButton.swift; sourceTree = "<group>"; };
+		FE0ADEE225CB4C6000DCFFAC /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		FEAF97AB25C37144008D41AA /* PDFNFCOhMy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFNFCOhMy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAF97AE25C37144008D41AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAF97B025C37144008D41AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				FE0ADEC125CB1EC000DCFFAC /* UI */,
 				FE0ADEBC25CB107500DCFFAC /* UIButton+Ext.swift */,
+				FE0ADEE225CB4C6000DCFFAC /* UIImageView+Ext.swift */,
 				FE0ADEBB25CB107500DCFFAC /* UIViewController+Ext.swift */,
 				E32E327125C45800003A7926 /* PDFNFCOhMy.entitlements */,
 				FEAF97C725C384F9008D41AA /* Utility */,
@@ -211,6 +214,7 @@
 				E32E327A25C465BB003A7926 /* NFCShareController.swift in Sources */,
 				FEAF97AF25C37144008D41AA /* AppDelegate.swift in Sources */,
 				FEAF97B125C37144008D41AA /* SceneDelegate.swift in Sources */,
+				FE0ADEE325CB4C6000DCFFAC /* UIImageView+Ext.swift in Sources */,
 				FE0ADEC325CB1EC900DCFFAC /* SerialButton.swift in Sources */,
 				FE0ADEBD25CB107500DCFFAC /* UIViewController+Ext.swift in Sources */,
 				E32E327625C45871003A7926 /* NFC.swift in Sources */,

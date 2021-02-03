@@ -31,10 +31,10 @@
                                     <constraint firstAttribute="height" constant="48" id="RiG-6l-myP"/>
                                     <constraint firstAttribute="width" constant="72" id="ijw-EX-bVT"/>
                                 </constraints>
-                                <color key="tintColor" red="0.0" green="0.031372549020000001" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle"/>
-                                    <imageReference key="image" image="barcode.viewfinder" catalog="system" symbolScale="large"/>
+                                    <imageReference key="image" image="barcode.viewfinder" catalog="system" symbolScale="large" renderingMode="template"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                 </state>
                                 <connections>

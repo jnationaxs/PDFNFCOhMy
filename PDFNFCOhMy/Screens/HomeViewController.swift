@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
 
     private lazy var showBarcodeAction: SerialButtonOptionAction = {
         { showBarcodeOption in
-            self.barcodeImageView.fillWithBarcode()
+            self.barcodeImageView.fillWithBarcode(scale: CGSize(width: 0.6, height: 0.6))
         }
     }()
 
@@ -32,6 +32,7 @@ class HomeViewController: UIViewController {
                 self.showSimpleAlert(msg: "Unable to generate PDF", title: "Error")
                 return
             }
+            self.showSimpleAlert(msg: "PDF Generated", title: "Success!")
         }
     }()
 
@@ -42,18 +43,5 @@ class HomeViewController: UIViewController {
         viewModeButton.addOption(SerialButtonOption.showingPDF, action: convertToPDFAction)
         barcodeImageView.isUserInteractionEnabled = false
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        viewModeButton.setOptionIndex(index: 0)
-    }
-
-
 }
 
-extension UIImageView {
-    func fillWithBarcode() {
-        let scaleTransform = CGAffineTransform(scaleX: 0.4, y: 0.4)
-        self.image = BarcodeGenerator.generate(descriptor: .qr, size: self.bounds.size.applying(scaleTransform))
-    }
-}
